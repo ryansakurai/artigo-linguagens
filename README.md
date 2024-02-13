@@ -44,6 +44,20 @@ Por outro lado, linguagens estáticas são conhecidas por sua robustez, seguran�
 
 Na prática, as linguagens geralmente não se enquadram puramente em um desses paradigmas, mas incorporam características de ambos. Essas particularidades serão exemplificadas mais adiante neste artigo.
 
+```java
+// Tipagem Estática:
+
+Integer x = 420;
+x = "AAAAAAAAAAAAAAAAAAAAAAA" // gera erro de compilação
+```
+
+```python
+# Tipagem Dinâmica:
+
+x = 69
+x = "antes sofria, hoje sou fria" # permitido
+```
+
 ### Tipagem Forte vs Tipagem Fraca
 
 

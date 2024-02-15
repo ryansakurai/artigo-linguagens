@@ -91,6 +91,28 @@ const b = "2"
 a = a + b   // a = "102"
 ```
 
+## Paradigmas de Programação
+
+Paradigmas de programação referem-se a maneiras de estruturar e conceber código, essencialmente representando abordagens distintas para resolver problemas por meio da programação. São, portanto, maneiras de programar.
+
+A categorização dos paradigmas divide-se principalmente em dois tipos: programação imperativa e programação declarativa. A programação imperativa envolve a explicitação passo a passo de ações a serem executadas, baseando-se na mudança de estado do programa e no controle do fluxo de execução, refletindo de perto o funcionamento interno de um computador.
+
+Por outro lado, a programação declarativa concentra-se apenas na declaração do problema e na especificação do resultado desejado, sem prescrever a sequência exata de passos para atingir esse resultado. Essa abordagem é mais abstrata, distanciando-se do nível de detalhes da implementação.
+
+Linguagens de programação podem adotar exclusivamente um paradigma, mas é mais comum que uma linguagem ofereça suporte a vários paradigmas, mesmo que um deles seja predominante. Nesta seção, apresentaremos os paradigmas mais amplamente utilizados: programação procedural, programação orientada a objetos e programação funcional.
+
+### Programação Procedural
+
+
+
+### Programação Orientada a Objetos
+
+
+
+### Programação Funcional
+
+
+
 ## Fontes
 
 [Compiled vs Interpreted Programming Languages | What’s the Difference?](https://youtu.be/F64_bwahaWQ?si=231_k91GpdvCPmJk)
@@ -100,3 +122,7 @@ a = a + b   // a = "102"
 [Static VS Dynamic Programming Languages 🤔 | WHAT'S THE DIFFERENCE?](https://youtu.be/bCIFTWQorL0?si=eHUNDQtGOmKLAial)
 
 [Typing: Static vs Dynamic, Weak vs. Strong / Intro to JavaScript ES6 programming, lesson 16](https://youtu.be/C5fr0LZLMAs?si=wLLbSbyw4SrbX5ia)
+
+[Programming paradigm - Wikipedia](https://en.wikipedia.org/wiki/Programming_paradigm)
+
+[Introduction of Programming Paradigms - GeeksforGeeks](https://www.geeksforgeeks.org/introduction-of-programming-paradigms/)

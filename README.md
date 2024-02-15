@@ -4,10 +4,6 @@
     - *javascript
     - *python
     - *java
-        - kotlin
-        - c#
-    - swift
-    - php
     - go
 -->
 
@@ -187,7 +183,55 @@ main = do
 
 ### C/C++
 
+A linguagem C é notável por sua posição como uma linguagem de programação de nível mais baixo, destacando-se como uma linguagem procedural amplamente utilizada. Ela desempenha um papel fundamental na construção de sistemas operacionais, drivers, sistemas embarcados e até mesmo na implementação de compiladores e interpretadores para outras linguagens. Grande parte do que é usado hoje no dia a dia foi construído nas bases sólidas dessa linguagem.
 
+Seu impacto não se limita apenas à sua aplicação direta, pois influenciou a criação de várias outras linguagens populares, como JavaScript e Java. A simplicidade inerente à linguagem C é evidente em seu reduzido conjunto de palavras reservadas, tornando-a uma escolha simples para muitos desenvolvedores.
+
+No entanto, sua simplicidade também se reflete em características que podem desafiar desenvolvedores, como o gerenciamento manual de memória, utilizando ponteiros para referenciar posições de memória. Essa abordagem pode levar a códigos mais propensos a erros de segurança.
+
+Outro aspecto peculiar é a falta de estruturas de dados mais complexas, e a inexistência de um tipo de dado dedicado para strings, que são representadas como simples vetores de caracteres. A tipagem estática e fraca da linguagem C significa que, embora o compilador faça verificações de tipo, a primitividade dos tipos permite conversões implícitas. Caracteres, booleanos e ponteiros são representados como inteiros, proporcionando facilidade de conversão entre eles.
+
+C++ surge como um superconjunto de C, acrescentando suporte à Programação Orientada a Objetos (POO). Apesar de compartilhar muitas características com C, como sua aplicação, a curva de aprendizado íngreme e uma tipagem mais forte também a diferenciam de seu subconjunto. Enquanto C é venerada por sua velocidade, C++ expande suas capacidades, especialmente em domínios onde a POO é essencial.
+
+```c
+// C:
+
+#include <stdio.h>
+
+int main() {
+    int num1, num2;
+    printf("Digite o primeiro numero: ");
+    scanf("%d", &num1);
+
+    printf("Digite o segundo numero: ");
+    scanf("%d", &num2);
+
+    int soma = num1 + num2;
+    printf("A soma de %d com %d e: %d\n", num1, num2, soma);
+
+    return 0;
+}
+```
+
+```c++
+// C++:
+
+#include <iostream>
+
+int main() {
+    int num1, num2;
+    std::cout << "Digite o primeiro numero: ";
+    std::cin >> num1;
+
+    std::cout << "Digite o segundo numero: ";
+    std::cin >> num2;
+
+    int soma = num1 + num2;
+    std::cout << "A soma de " << num1 << " com " << num2 << " e: " << soma << std::endl;
+
+    return 0;
+}
+```
 
 ### Javascript
 
@@ -218,3 +262,5 @@ main = do
 [Dear Functional Bros - YouTube](https://youtu.be/nuML9SmdbJ4?si=DT0aT1OfnTfsfvaJ)
 
 [Functional programming - A general introduction - YouTube](https://youtu.be/8z_bUIl_uPo?si=ER_PFJvuvp8Gdv2Y)
+
+[C (programming language) - Wikipedia](https://en.wikipedia.org/wiki/C_(programming_language))

@@ -1,6 +1,4 @@
 <!--
-- tipagem
-    - forte x fraca
 - paradigmas
     - procedural
     - OO
@@ -49,6 +47,8 @@ Em geral, em linguagens com tipagem estática, o tipo de uma variável é determ
 
 Por outro lado, em linguagens com tipagem dinâmica, o tipo de uma variável só é conhecido durante a execução do programa, podendo variar dependendo do ponto em que a execução está sendo analisada. Linguagens com essa característica geralmente são interpretadas, pois a tipagem dinâmica e a interpretação se complementam.
 
+Em outras palavras, o que diferencia esses dois grupos é o momento em que acontecem as checagens de tipo. Em linguagens dinâmicas, ela acontece em tempo de execução, enquanto em linguagens estáticas ela acontece em tempo de compilação, antes da execução.
+
 Ao comparar os dois estilos de tipagem, as vantagens de um geralmente coincidem com as desvantagens do outro. Linguagens dinâmicas oferecem maior flexibilidade, dinamicidade e exigem menos código, porém, em troca, podem sacrificar robustez, previsibilidade, desempenho e proteção contra bugs, características presentes em linguagens estáticas.
 
 Por outro lado, linguagens estáticas são conhecidas por sua robustez, segurança, maior desempenho e previsibilidade. No entanto, podem ser consideradas mais rígidas e verbosas em comparação com as linguagens dinâmicas.
@@ -69,9 +69,27 @@ x = 69
 x = "antes sofria, hoje sou fria" # permitido
 ```
 
-### Tipagem Forte vs Tipagem Fraca
+### Tipagem Forte e Tipagem Fraca
 
+Na subseção anterior, delineamos a distinção entre linguagens com base no momento da realização da checagem de tipos. Agora, voltamos nossa atenção para a rigidez dessa checagem, sendo que a natureza desta diferenciação é menos clara, uma vez que se trata de um espectro contínuo.
 
+A tipagem de uma linguagem, quando mais fraca, amplia a probabilidade de ocorrerem conversões implícitas de tipo. Em outras palavras, a frequência dessas conversões está intrinsecamente ligada ao grau de permissividade concedido pela linguagem na manipulação de tipos de dados. Como mostrado a seguir, ainda mais que a tipagem dinâmica, uma tipagem mais fraca pode comprometer a segurança e a previsibilidade de uma linguagem:
+
+```java
+// Característica de Tipagem Forte:
+
+int a = 10;
+String b = "2";
+a = a + b;  // Gera erro de tipo
+```
+
+```js
+// Característica de Tipagem Fraca:
+
+let a = 10
+const b = "2"
+a = a + b   // a = "102"
+```
 
 ## Fontes
 
@@ -80,3 +98,5 @@ x = "antes sofria, hoje sou fria" # permitido
 [Static vs Dynamic Typing | Which languages are better?](https://youtu.be/GqXpFycPWLE?si=vXei9EWiijcXiTaQ)
 
 [Static VS Dynamic Programming Languages 🤔 | WHAT'S THE DIFFERENCE?](https://youtu.be/bCIFTWQorL0?si=eHUNDQtGOmKLAial)
+
+[Typing: Static vs Dynamic, Weak vs. Strong / Intro to JavaScript ES6 programming, lesson 16](https://youtu.be/C5fr0LZLMAs?si=wLLbSbyw4SrbX5ia)

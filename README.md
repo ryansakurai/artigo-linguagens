@@ -1,17 +1,11 @@
 <!--
-- paradigmas
-    - procedural
-    - OO
-    - funcional
-    - lógica
-    - específica de domínio
 - exemplos reais
     - *c/c++
+    - *javascript
     - *python
     - *java
         - kotlin
         - c#
-    - *javascript
     - swift
     - php
     - go
@@ -109,6 +103,27 @@ A estruturação por procedimentos confere à programação procedural a vantage
 
 A programação procedural apresenta o menor nível de abstração entre os três paradigmas sendo apresentados. Em virtude de sua simplicidade e proximidade com o funcionamento interno de um computador, a programação procedural é mais amplamente adotada por linguagens de mais baixo nível, onde é exigido maior controle sobre o hardware e o desempenho é crítico.
 
+```c
+// Exemplo de uso do paradigma procedural:
+
+int somar(int a, int b) {
+    return a + b;
+}
+
+int calcular_media(float numeros[], int qt_numeros) {
+    float soma = 0;
+    for(int i=0; i < qt_numeros; i = i+=1)
+        soma = somar(soma, numeros[i]);
+    return soma / qt_numeros;
+}
+
+int main() {
+    float media = calcular_media(1, 2, 3, 4);
+
+    return 0;
+}
+```
+
 ### Programação Orientada a Objetos
 
 A programação orientada a objetos (POO) é um paradigma imperativo amplamente adotado na atualidade, destacando-se como o mais popular entre os desenvolvedores. Nesse paradigma, um programa é estruturado em torno de objetos, entidades que possuem tanto atributos (dados) quanto métodos (comportamentos).
@@ -123,6 +138,20 @@ O polimorfismo é outra característica relevante, permitindo que objetos de dif
 
 A POO é considerada a melhor maneira de modelar o mundo por meio de código. Essa metodologia proporciona não apenas reusabilidade de código e modularidade, características já presentes na programação procedural, mas também introduz abstração e encapsulamento. A comunicação com um objeto é realizada exclusivamente através de seus métodos, sem a necessidade de entender detalhes internos, o que favorece a colaboração em equipe e a construção de projetos complexos de maneira mais eficiente. Essa combinação de características faz da programação orientada a objetos uma escolha valiosa para o desenvolvimento de grandes projetos e o trabalho colaborativo entre desenvolvedores.
 
+```python
+# Exemplo de uso do paradigma orientado a objetos:
+
+pessoa1 = Pessoa(nome="Edward Newgate")
+pessoa2 = Pessoa(nome="Macaco Luffy")
+cachorro1 = Cachorro(nome="Terremoto", dono=pessoa1)
+cachorro2 = Cachorro(nome="Buda de Ouro Gigante", dono=pessoa2)
+
+cachorro2.morder(cachorro1)
+pessoa1.xingar(pessoa2)
+pessoa2.pegar_cachorro(cachorro1)
+pessoa2.correr()
+```
+
 ### Programação Funcional
 
 A programação funcional, um tipo de programação declarativa, difere das abordagens imperativas ao estruturar um programa através da declaração de funções, assemelhando-se a funções matemáticas. Essa abordagem possui o mais alto nível de abstração entre as três.
@@ -136,6 +165,41 @@ Outro aspecto distintivo é a presença de funções puras, que são determinís
 A proximidade da programação funcional com a matemática confere-lhe uma vantagem na redução de bugs e na possibilidade de verificação formal. No entanto, essa proximidade também pode resultar em um nível de abstração que, em conjunto com o distanciamento do real funcionamento de um computador, torna os programas mais difíceis de entender.
 
 Embora linguagens predominantemente funcionais não alcancem a mesma popularidade de outras, é notável que muitos dos conceitos inovadores desse paradigma, quando integrados a abordagens de diferentes paradigmas, revelam-se extremamente poderosos. Essas ideias, combinadas de maneira sinérgica, são amplamente adotadas por linguagens mais difundidas e tem bastante espaço no desenvolvimento moderno.
+
+```haskell
+-- Exemplo de uso do paradigma funcional
+fatorial :: Integer -> Integer
+fatorial 0 = 1
+fatorial n = n * fatorial (n - 1)
+
+dobrarNumero :: Int -> Int
+dobrarNumero x = 2 * x
+
+main = do
+    let x = fatorial 3    -- x = 6
+
+    let y = [1, 2, 3, 4, 5]
+    let z = map dobrarNumero y -- z = [2, 4, 6, 8, 10]
+
+```
+
+## Exemplos Reais
+
+### C/C++
+
+
+
+### Javascript
+
+
+
+### Java
+
+
+
+### Python
+
+
 
 ## Fontes
 

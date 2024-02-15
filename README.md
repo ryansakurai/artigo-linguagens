@@ -189,7 +189,7 @@ A linguagem C é notável por sua posição como uma linguagem de programação 
 
 Seu impacto não se limita apenas à sua aplicação direta, pois influenciou a criação de várias outras linguagens populares, como [JavaScript](#javascript) e [Java](#java). A simplicidade inerente à linguagem C é evidente em seu reduzido conjunto de palavras reservadas, tornando-a uma escolha simples para muitos desenvolvedores.
 
-No entanto, sua simplicidade também se reflete em características que podem desafiar desenvolvedores, como o gerenciamento manual de memória, utilizando ponteiros para referenciar posições de memória. Essa abordagem pode levar a códigos mais propensos a erros de segurança.
+No entanto, sua simplicidade também se reflete em características que podem desafiar desenvolvedores, como o gerenciamento manual de memória, utilizando ponteiros para referenciar posições de memória. Essa abordagem pode levar a códigos mais propensos a erros de segurança. Dentre os exemplos presentes nesta seção, C e C++ são as únicas linguagens que não usam coletor de lixo para a desalocação automática de memória inutilizada.
 
 Outro aspecto peculiar é a falta de estruturas de dados mais complexas, e a inexistência de um tipo de dado dedicado para strings, que são representadas como simples vetores de caracteres. A tipagem estática e fraca da linguagem C significa que, embora o compilador faça verificações de tipo, a primitividade dos tipos permite conversões implícitas. Caracteres, booleanos e ponteiros são representados como inteiros, proporcionando facilidade de conversão entre eles.
 
@@ -245,7 +245,7 @@ Apesar de fazer parte da especificação da linguagem (ECMAScript), muitos recur
 
 O ecossistema do JavaScript é vasto, incluindo frameworks como Next.js, Angular e Vue.js, que são amplamente utilizados no desenvolvimento front-end. Outro destaque é a popularização do formato JSON, derivado do JS, mas adotado como padrão de mercado por inúmeras linguagens.
 
-JavaScript é considerada uma linguagem interpretada, embora a realidade seja mais complexa hoje em dia. No motor V8, presente nos navegadores baseados em Chromium, o código é convertido em bytecode, interpretado inicialmente. À medida que o programa é executado, partes frequentemente usadas são convertidas para código de máquina nativo, garantindo maior rapidez na execução. Isso é chamado de compilação *Just-in-time*(JIT)
+JavaScript é considerada uma linguagem interpretada, embora a realidade seja mais complexa hoje em dia. No motor V8, presente nos navegadores baseados em Chromium, o código é convertido em bytecode, que é interpretado inicialmente. À medida que o programa é executado, partes frequentemente usadas são convertidas para código de máquina nativo, garantindo maior rapidez na execução. Isso é chamado de compilação *Just-in-time*(JIT). Apesar disso, a execução de um programa JS ainda é feito a partir do código-fonte.
 
 O motor V8, sendo independente de um navegador, possibilitou a expansão do uso do JavaScript para o back-end, através de ambientes como o Node.js. No back-end, JS também possui um amplo ecossistema, com o npm registrando o maior número de pacotes do mundo. Frameworks notáveis incluem Express, Fastify e Nest.js.
 
@@ -288,11 +288,37 @@ const num2: number = 10;
 const result: number = addNumbers(num1, num2);
 ```
 
-### Java
-
-
-
 ### Python
+
+Python é uma linguagem de alto nível, multiparadigma e extremamente versátil, destacando-se em diversas áreas de aplicação. Ao lado de JavaScript, tornou-se uma das linguagens mais populares no cenário da programação moderna.
+
+Uma característica marcante do Python é o seu foco na legibilidade e simplicidade do código. Para alcançar esse objetivo, a linguagem utiliza a identação como delimitador de bloco, em contraste com o uso de chaves em outras linguagens. Além disso, o uso de parênteses é minimizado, e muitos símbolos presentes em outras linguagens são substituídos por palavras do inglês, facilitando a compreensão do código.
+
+Apesar de ser uma linguagem de tipagem dinâmica, o Python permite a utilização de anotações de tipo. Essas anotações servem não apenas para documentação, mas também para a verificação de tipos por meio de ferramentas externas, proporcionando um ambiente mais robusto para o desenvolvimento.
+
+Embora Python seja majoritariamente uma linguagem de tipagem forte, é importante notar que ela realiza conversões implícitas de outros tipos para booleano, demonstrando uma flexibilidade que pode ser explorada de maneira estratégica.
+
+Na implementação mais difundida, CPython, o código fonte é compilado para bytecode e, após isso, interpretado. Apesar desse processo, a execução de um programa ocorre a partir do código-fonte, com ambas as etapas sendo realizadas atomicamente.
+
+Python é amplamente reconhecido por sua riqueza em recursos e pela presença de uma vasta biblioteca padrão. Além disso, a instalação de pacotes externos é facilitada pelo gerenciador de pacotes pip, e esses pacotes são hospedados no registro PyPI, que conta com os pacotes feitos por uma das maiores comunidades na esfera do desenvolvimento.
+
+A linguagem é amplamente utilizada no desenvolvimento web back end, sendo suportada por frameworks como Django e Flask. Além disso, Python desempenha um papel crucial em campos como inteligência artificial e aprendizado de máquina, contando com bibliotecas renomadas como TensorFlow, Keras e PyTorch.
+
+Na área de ciência de dados, Python é uma escolha popular, impulsionada por bibliotecas como NumPy, Pandas e Matplotlib, que oferecem ferramentas poderosas para análise e visualização de dados, além das bibliotecas de IA citadas. Adicionalmente, Python é frequentemente empregado na automação, onde uma variedade de bibliotecas pode ser explorada para simplificar e otimizar tarefas automatizadas em diferentes contextos.
+
+```python
+# Python:
+
+def soma_quadrados_se_par(lista):
+    return sum(x**2 for x in lista if x % 2 == 0)
+
+numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+resultado = soma_quadrados_se_par(numeros)
+print(f"A soma dos quadrados dos números pares em {numeros} é: {resultado}")
+
+```
+
+### Java
 
 
 
@@ -327,3 +353,9 @@ const result: number = addNumbers(num1, num2);
 [Franziska Hinkelmann: JavaScript engines - how do they even? | JSConf EU - YouTube](https://youtu.be/p-iiEDtpy6I?si=FqMWP5J8KeWzs4Xx)
 
 [TypeScript - Wikipedia](https://en.wikipedia.org/wiki/TypeScript)
+
+[Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+[Python Data Science Handbook | Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/)
+
+[Python in 100 Seconds - YouTube](https://youtu.be/x7X9w_GIm1s?si=GlIHBCQoMrM9nR66)

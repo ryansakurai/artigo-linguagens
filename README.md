@@ -237,7 +237,56 @@ int main() {
 
 ### Javascript
 
+JavaScript (JS) é uma linguagem de alto nível, reconhecida como uma das, se não a linguagem mais popular do mundo. Sua popularidade é impulsionada pelo fato de ser uma tecnologia fundamental na *World Wide Web*, com mais de 98% dos sites utilizando JS no *front-end*. Todos os navegadores mais utilizados possuem uma engine dedicada à execução de código JS.
 
+Esta linguagem é conhecida por sua tipagem dinâmica e extremamente fraca, resultando em comportamentos por vezes bizarros e inconsistentes. Além disso, JS é multiparadigma, oferecendo suporte à orientação a objetos baseada em protótipo, uma alternativa às classes que dá dinamismo e flexibilidade ao código, e à programação funcional, incluindo, inclusive, o uso de funções de primeira classe. JS brilha especialmente na programação orientada a eventos, fazendo uso de sua capacidade para assincronicidade e manipulação do HTML através do DOM.
+
+Apesar de fazer parte da especificação da linguagem (ECMAScript), muitos recursos importantes são fornecidos pelo sistema de execução, como no caso do browser. O loop de eventos não bloqueante, por exemplo, permite que, mesmo usando uma única thread, o JS trate de outras tarefas enquanto espera a resposta de APIs, bancos de dados ou outros agentes assíncronos.
+
+O ecossistema do JavaScript é vasto, incluindo frameworks como Next.js, Angular e Vue.js, que são amplamente utilizados no desenvolvimento front-end. Outro destaque é a popularização do formato JSON, derivado do JS, mas adotado como padrão de mercado por inúmeras linguagens.
+
+JavaScript é considerada uma linguagem interpretada, embora a realidade seja mais complexa hoje em dia. No motor V8, presente nos navegadores baseados em Chromium, o código é convertido em bytecode, interpretado inicialmente. À medida que o programa é executado, partes frequentemente usadas são convertidas para código de máquina nativo, garantindo maior rapidez na execução. Isso é chamado de compilação *Just-in-time*(JIT)
+
+O motor V8, sendo independente de um navegador, possibilitou a expansão do uso do JavaScript para o back-end, através de ambientes como o Node.js. No back-end, JS também possui um amplo ecossistema, com o npm registrando o maior número de pacotes do mundo. Frameworks notáveis incluem Express, Fastify e Nest.js.
+
+Assim como C, JavaScript também possui um superconjunto: TypeScript. TypeScript adiciona segurança e robustez da tipagem estática ao JavaScript, gerando código JS após a compilação. Essa evolução torna JS uma linguagem mais versátil, pois seu uso em sistemas de grande porte é favorecido.
+
+```js
+// JS no Front-End:
+
+document.getElementById('botaoMudarTexto').addEventListener('click', function() {
+  const elementoDeOutput = document.getElementById('output')
+  elementoDeOutput.innerText = 'Texto mudado!'
+})
+```
+
+```js
+// JS no Back-End:
+
+const http = require('http')
+
+const server = http.createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/plain' })
+  res.end('Massa, meu irmão\n')
+})
+
+const port = 3000
+server.listen(port, () => {
+  console.log(`Servidor rodando em http://localhost:${port}/`)
+})
+```
+
+```ts
+// TypeScript:
+
+function addNumbers(a: number, b: number): number {
+  return a + b;
+}
+
+const num1: number = 5;
+const num2: number = 10;
+const result: number = addNumbers(num1, num2);
+```
 
 ### Java
 
@@ -268,3 +317,13 @@ int main() {
 [C (programming language) - Wikipedia](https://en.wikipedia.org/wiki/C_(programming_language))
 
 [C++ - Wikipedia](https://en.wikipedia.org/wiki/C%2B%2B)
+
+[JavaScript - Wikipedia](https://en.wikipedia.org/wiki/JavaScript)
+
+[Usage Statistics of JavaScript as Client-side Programming Language on Websites, February 2024](https://w3techs.com/technologies/details/cp-javascript)
+
+[Understanding the V8 JavaScript Engine - YouTube](https://youtu.be/xckH5s3UuX4?si=ox4aZI4zr6tA2tJM)
+
+[Franziska Hinkelmann: JavaScript engines - how do they even? | JSConf EU - YouTube](https://youtu.be/p-iiEDtpy6I?si=FqMWP5J8KeWzs4Xx)
+
+[TypeScript - Wikipedia](https://en.wikipedia.org/wiki/TypeScript)

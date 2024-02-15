@@ -59,7 +59,7 @@ Na prática, as linguagens geralmente não se enquadram puramente em um desses p
 // Tipagem Estática:
 
 Integer x = 420;
-x = "AAAAAAAAAAAAAAAAAAAAAAA" // gera erro de compilação
+x = "Pinhalzinho - SP" // gera erro de compilação
 ```
 
 ```python
@@ -103,26 +103,54 @@ Linguagens de programação podem adotar exclusivamente um paradigma, mas é mai
 
 ### Programação Procedural
 
+A programação procedural, pertencente à categoria de programação imperativa, é caracterizada pela estruturação do programa em procedimentos. Estes procedimentos consistem em trechos distintos de instruções que se comunicam entre si para alcançar um objetivo específico.
 
+A estruturação por procedimentos confere à programação procedural a vantagem da reusabilidade do código, uma vez que um mesmo procedimento pode ser invocado em diferentes partes do programa. Esta característica promove a modularidade e facilita a manutenção do código, por torná-lo menor e mais legível. Além disso, a atualização de um procedimento reflete automaticamente em todas as chamadas realizadas ao longo do código.
+
+A programação procedural apresenta o menor nível de abstração entre os três paradigmas sendo apresentados. Em virtude de sua simplicidade e proximidade com o funcionamento interno de um computador, a programação procedural é mais amplamente adotada por linguagens de mais baixo nível, onde é exigido maior controle sobre o hardware e o desempenho é crítico.
 
 ### Programação Orientada a Objetos
 
+A programação orientada a objetos (POO) é um paradigma imperativo amplamente adotado na atualidade, destacando-se como o mais popular entre os desenvolvedores. Nesse paradigma, um programa é estruturado em torno de objetos, entidades que possuem tanto atributos (dados) quanto métodos (comportamentos).
 
+Em grande parte das linguagens de programação, os objetos são definidos por meio de classes. As classes são essencialmente descrições de quais características um objeto deve possuir e quais ações ele deve ser capaz de realizar. Os objetos são então instâncias concretas dessas classes, moldados conforme as especificações da classe.
+
+Para ilustrar esse conceito, consideremos uma classe que define um cachorro com atributos como raça e nome, juntamente com métodos para latir e correr. Podemos criar diferentes instâncias dessa classe, como um cachorro da raça *Bulldog* Francês chamado Sushi e outro da raça *American Bully* chamado Zara. Além disso, podemos fazer os dois cachorros de fato latirem e até interagir um com outro (por exemplo, correr atrás do outro).
+
+Além disso, o paradigma incorpora conceitos poderosos como a herança, que possibilita o reaproveitamento de código ao permitir que uma classe herde características e comportamentos de outra. Reutilizando o exemplo anterior, podemos ter uma classe Cachorro como base e criar subclasses específicas como *Bulldog* Francês e *American Bully*, herdando as características da classe principal. Isso proporciona uma organização hierárquica que reflete a relação entre diferentes tipos de cachorros.
+
+O polimorfismo é outra característica relevante, permitindo que objetos de diferentes classes sejam tratados de maneira uniforme. No exemplo dos cachorros, podemos ter uma função que aceita qualquer instância de cachorro como parâmetro, independentemente da raça específica. Isso aumenta a flexibilidade e extensibilidade do código.
+
+A POO é considerada a melhor maneira de modelar o mundo por meio de código. Essa metodologia proporciona não apenas reusabilidade de código e modularidade, características já presentes na programação procedural, mas também introduz abstração e encapsulamento. A comunicação com um objeto é realizada exclusivamente através de seus métodos, sem a necessidade de entender detalhes internos, o que favorece a colaboração em equipe e a construção de projetos complexos de maneira mais eficiente. Essa combinação de características faz da programação orientada a objetos uma escolha valiosa para o desenvolvimento de grandes projetos e o trabalho colaborativo entre desenvolvedores.
 
 ### Programação Funcional
 
+A programação funcional, um tipo de programação declarativa, difere das abordagens imperativas ao estruturar um programa através da declaração de funções, assemelhando-se a funções matemáticas. Essa abordagem possui o mais alto nível de abstração entre as três.
 
+Uma característica fundamental da programação funcional é o tratamento das funções como "cidadãs de primeira classe", o que significa que elas podem ser atribuídas a constantes e variáveis, passadas como parâmetro para outras funções e retornadas por funções, como qualquer outro tipo de dado.
+
+Uma característica marcante de linguagens puramente funcionais é a ausência do conceito de atribuição, eliminando a troca de valores de variáveis. Essa escolha é feita devido à complexidade que as atribuições trazem ao código, uma vez que é preciso levar em consideração o momento de execução para saber o valor de uma variável. Por isso, linguagens puramente funcionais evitam o uso de loops, recorrendo à recursão e a funções padrão da linguagem como substitutos, uma vez que loops necessitam do conceito de atribuição.
+
+Outro aspecto distintivo é a presença de funções puras, que são determinísticas e sempre retornam o mesmo valor para o mesmo conjunto de argumentos. Essa previsibilidade é possível devido à ausência de dependência de fatores externos além dos argumentos, o que torna as funções independentes entre si. Essa independência facilita a programação concorrente, onde funções podem ser executadas simultaneamente sem interferências.
+
+A proximidade da programação funcional com a matemática confere-lhe uma vantagem na redução de bugs e na possibilidade de verificação formal. No entanto, essa proximidade também pode resultar em um nível de abstração que, em conjunto com o distanciamento do real funcionamento de um computador, torna os programas mais difíceis de entender.
+
+Embora linguagens predominantemente funcionais não alcancem a mesma popularidade de outras, é notável que muitos dos conceitos inovadores desse paradigma, quando integrados a abordagens de diferentes paradigmas, revelam-se extremamente poderosos. Essas ideias, combinadas de maneira sinérgica, são amplamente adotadas por linguagens mais difundidas e tem bastante espaço no desenvolvimento moderno.
 
 ## Fontes
 
-[Compiled vs Interpreted Programming Languages | What’s the Difference?](https://youtu.be/F64_bwahaWQ?si=231_k91GpdvCPmJk)
+[Compiled vs Interpreted Programming Languages | What’s the Difference? - YouTube](https://youtu.be/F64_bwahaWQ?si=231_k91GpdvCPmJk)
 
-[Static vs Dynamic Typing | Which languages are better?](https://youtu.be/GqXpFycPWLE?si=vXei9EWiijcXiTaQ)
+[Static vs Dynamic Typing | Which languages are better? - YouTube](https://youtu.be/GqXpFycPWLE?si=vXei9EWiijcXiTaQ)
 
-[Static VS Dynamic Programming Languages 🤔 | WHAT'S THE DIFFERENCE?](https://youtu.be/bCIFTWQorL0?si=eHUNDQtGOmKLAial)
+[Static VS Dynamic Programming Languages 🤔 | WHAT'S THE DIFFERENCE? - YouTube](https://youtu.be/bCIFTWQorL0?si=eHUNDQtGOmKLAial)
 
-[Typing: Static vs Dynamic, Weak vs. Strong / Intro to JavaScript ES6 programming, lesson 16](https://youtu.be/C5fr0LZLMAs?si=wLLbSbyw4SrbX5ia)
+[Typing: Static vs Dynamic, Weak vs. Strong / Intro to JavaScript ES6 programming, lesson 16 - YouTube](https://youtu.be/C5fr0LZLMAs?si=wLLbSbyw4SrbX5ia)
 
 [Programming paradigm - Wikipedia](https://en.wikipedia.org/wiki/Programming_paradigm)
 
 [Introduction of Programming Paradigms - GeeksforGeeks](https://www.geeksforgeeks.org/introduction-of-programming-paradigms/)
+
+[Dear Functional Bros - YouTube](https://youtu.be/nuML9SmdbJ4?si=DT0aT1OfnTfsfvaJ)
+
+[Functional programming - A general introduction - YouTube](https://youtu.be/8z_bUIl_uPo?si=ER_PFJvuvp8Gdv2Y)

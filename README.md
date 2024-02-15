@@ -15,15 +15,17 @@ Nos primórdios da computação, os programadores trabalhavam predominantemente 
 
 ## Compilação e Interpretação
 
-Em uma linguagem compilada, o desenvolvedor escreve o código em uma linguagem de programação, e todo o código é convertido integralmente em linguagem de máquina durante o processo de compilação. Esse resultado é um executável independente que pode ser executado sem a necessidade do código-fonte original. Esse método proporciona uma execução rápida, pois a tradução para código de máquina ocorre durante a compilação, otimizando completamente o código para o sistema alvo.
+Embora comumente rotulemos linguagens como "compiladas" ou "interpretadas", tecnicamente, essa classificação é imprecisa. A natureza compilada ou interpretada de uma linguagem é uma característica da implementação, não da linguagem em si. Na prática, é perfeitamente possível criar um compilador para uma linguagem geralmente considerada interpretada ou desenvolver um interpretador para uma linguagem geralmente vista como compilada.
+
+Mesmo ao desconsiderarmos essa tecnicidade, o título de uma linguagem como "interpretada" ou "compilada" permanece obscuro, com controvérsias em relação a exemplos práticos. Essa ambiguidade é atribuída, em parte, ao fato de que muitas linguagens, especialmente aquelas rotuladas como interpretadas, frequentemente adotam abordagens mistas. Por isso, serão tratadas definições teóricas nesta seção e exemplos particulares mais a frente no artigo.
+
+É considerado que em uma linguagem compilada, o desenvolvedor escreve o código em uma linguagem de programação, e todo o código é convertido integralmente em linguagem de máquina durante o processo de compilação. Esse resultado é um executável independente que pode ser executado sem a necessidade do código-fonte original. Esse método proporciona uma execução rápida, pois a tradução para código de máquina ocorre durante a compilação, otimizando completamente o código para o sistema alvo.
 
 Em contrapartida, linguagens interpretadas não geram um executável. Cada linha do código é convertida em código de máquina em tempo real por um interpretador, que é necessário durante toda a execução do programa. Embora a execução seja mais lenta em comparação com linguagens compiladas, a vantagem está na ausência de uma etapa de compilação, permitindo a execução imediata do código assim que é escrito.
 
 A compilação pode ser um processo demorado, mas oferece benefícios, como a total otimização do código, a ausência da responsabilidade de conversão do código durante execução e a privacidade do código-fonte, já que apenas o executável é distribuído. Por outro lado, em linguagens interpretadas, o próprio código-fonte é executado, proporcionando facilidade de distribuição, mas expondo o código ao ambiente de execução.
 
 No contexto de linguagens compiladas, o executável resultante não é multiplataforma, requerendo recompilação para cada sistema em que será executado. Em contraste, linguagens interpretadas podem ser executadas em qualquer sistema que possua o interpretador correspondente. Contudo, a execução nesse caso fica dependente do interpretador, o que pode ser considerado uma desvantagem.
-
-É importante notar que existem também linguagens híbridas, que combinam elementos de ambas as abordagens. Essa abordagem será discutida mais a frente no artigo.
 
 ## Sistemas de Tipos
 
@@ -154,7 +156,7 @@ A programação funcional, um tipo de programação declarativa, difere das abor
 
 Uma característica fundamental da programação funcional é o tratamento das funções como "cidadãs de primeira classe", o que significa que elas podem ser atribuídas a constantes e variáveis, passadas como parâmetro para outras funções e retornadas por funções, como qualquer outro tipo de dado.
 
-Uma característica marcante de linguagens puramente funcionais é a ausência do conceito de atribuição, eliminando a troca de valores de variáveis. Essa escolha é feita devido à complexidade que as atribuições trazem ao código, uma vez que é preciso levar em consideração o momento de execução para saber o valor de uma variável. Por isso, linguagens puramente funcionais evitam o uso de loops, recorrendo à recursão e a funções padrão da linguagem como substitutos, uma vez que loops necessitam do conceito de atribuição.
+Uma característica marcante de linguagens puramente funcionais é a ausência do conceito de atribuição, eliminando a troca de valores de variáveis. Essa escolha é feita devido à complexidade que as atribuições trazem ao código, uma vez que é preciso levar em consideração o momento de execução para saber o valor de uma variável. Por isso, linguagens puramente funcionais evitam o uso de *loops*, recorrendo à recursão e a funções padrão da linguagem como substitutos, uma vez que *loops* necessitam do conceito de atribuição.
 
 Outro aspecto distintivo é a presença de funções puras, que são determinísticas e sempre retornam o mesmo valor para o mesmo conjunto de argumentos. Essa previsibilidade é possível devido à ausência de dependência de fatores externos além dos argumentos, o que torna as funções independentes entre si. Essa independência facilita a programação concorrente, onde funções podem ser executadas simultaneamente sem interferências.
 
@@ -185,7 +187,7 @@ main = do
 
 A linguagem C é notável por sua posição como uma linguagem de programação de nível mais baixo, destacando-se como uma linguagem procedural amplamente utilizada. Ela desempenha um papel fundamental na construção de sistemas operacionais, drivers, sistemas embarcados e até mesmo na implementação de compiladores e interpretadores para outras linguagens. Grande parte do que é usado hoje no dia a dia foi construído nas bases sólidas dessa linguagem.
 
-Seu impacto não se limita apenas à sua aplicação direta, pois influenciou a criação de várias outras linguagens populares, como JavaScript e Java. A simplicidade inerente à linguagem C é evidente em seu reduzido conjunto de palavras reservadas, tornando-a uma escolha simples para muitos desenvolvedores.
+Seu impacto não se limita apenas à sua aplicação direta, pois influenciou a criação de várias outras linguagens populares, como [JavaScript](#javascript) e [Java](#java). A simplicidade inerente à linguagem C é evidente em seu reduzido conjunto de palavras reservadas, tornando-a uma escolha simples para muitos desenvolvedores.
 
 No entanto, sua simplicidade também se reflete em características que podem desafiar desenvolvedores, como o gerenciamento manual de memória, utilizando ponteiros para referenciar posições de memória. Essa abordagem pode levar a códigos mais propensos a erros de segurança.
 
@@ -264,3 +266,5 @@ int main() {
 [Functional programming - A general introduction - YouTube](https://youtu.be/8z_bUIl_uPo?si=ER_PFJvuvp8Gdv2Y)
 
 [C (programming language) - Wikipedia](https://en.wikipedia.org/wiki/C_(programming_language))
+
+[C++ - Wikipedia](https://en.wikipedia.org/wiki/C%2B%2B)

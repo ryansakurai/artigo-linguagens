@@ -320,7 +320,33 @@ print(f"A soma dos quadrados dos números pares em {numeros} é: {resultado}")
 
 ### Java
 
+Java é uma linguagem de programação multiparadigma, mas se destaca por sua ênfase em orientação a objetos. Em sua estrutura, todo código em um programa Java precisa estar encapsulado em classes, sendo cada arquivo responsável por definir uma classe específica.
 
+Com sua principal aplicação voltada para a construção de software robusto em larga escala no back-end, Java tem muito espaço no mercado nesse contexto. Sua arquitetura é híbrida entre interpretação e compilação, sendo que o código Java é compilado para bytecode, que, por sua vez, é interpretado pela Máquina Virtual do Java (JVM), um aspecto fundamental da linguagem.
+
+Diferentemente de linguagens como JavaScript e Python, onde o código fonte é executado diretamente, em Java é o arquivo em bytecode (.class) que é processado pelo usuário. Isso significa que, ao contrário de outras linguagens, o bytecode Java pode ser manipulado pelo usuário. O lema "escreva uma vez, execute em qualquer lugar" destaca a portabilidade do bytecode Java. Uma vez compilado, o bytecode pode ser executado em qualquer ambiente que possua a JVM, demonstrando a versatilidade da linguagem.
+
+É interessante observar que Java, cuja compilação para bytecode esteve presente desde seu início, foi responsável pela popularização desse método. Isso foi adotada por linguagens como JavaScript e Python apenas posteriormente. 
+
+Java, ao possuir características tanto de linguagens interpretadas quanto compiladas, combina a portabilidade de uma linguagem interpretada com a privacidade e a tipagem estática típica de linguagens compiladas. Essa dualidade confere a Java uma posição única no panorama das linguagens de programação.
+
+Contudo, apesar de suas vantagens, Java também enfrenta críticas. Sua sintaxe verbosa e menos amigável para iniciantes é frequentemente apontada como uma barreira à entrada na linguagem. Além disso, alguns problemas de desempenho relacionados à JVM são citados como desafios a serem superados.
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        Estudante hugo = new Estudante(802629, "Hugo");
+        Estudante vini = new Estudante(802138, "Vini";
+
+        Curso cursoDeJava = new Curso("Aprenda a Fazer o Minecraft");
+        cursoDeJava.matricular(hugo);
+        cursoDeJava.matricular(vini);
+
+        List<Estudante> alunos = cursoDeJava.getEstudantes()
+        System.out.println("Alunos: " + alunos);
+    }
+}
+```
 
 ## Fontes
 
@@ -359,3 +385,7 @@ print(f"A soma dos quadrados dos números pares em {numeros} é: {resultado}")
 [Python Data Science Handbook | Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/)
 
 [Python in 100 Seconds - YouTube](https://youtu.be/x7X9w_GIm1s?si=GlIHBCQoMrM9nR66)
+
+[Java (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Java_(programming_language))
+
+[Java in 100 Seconds - YouTube](https://youtu.be/l9AzO1FMgM8?si=ogxWVD0mySKl6uiH)

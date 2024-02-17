@@ -27,6 +27,9 @@ A compilação pode ser um processo demorado, mas oferece benefícios, como a to
 
 No contexto de linguagens compiladas, o executável resultante não é multiplataforma, requerendo recompilação para cada sistema em que será executado. Em contraste, linguagens interpretadas podem ser executadas em qualquer sistema que possua o interpretador correspondente. Contudo, a execução nesse caso fica dependente do interpretador, o que pode ser considerado uma desvantagem.
 
+![Compilação vs Interpretação](assets/compilacao-vs-interpretacao.jpg)
+[Compilação vs Interpretação](https://slideplayer.com.br/slide/3789737/)
+
 ## Sistemas de Tipos
 
 O sistema de tipos de uma linguagem é um conjunto de regras em que cada valor ou dado em um programa tem um tipo, sendo que os possíveis tipos variam de acordo com a linguagem. Esses são alguns exemplos de valores e seus tipos: `12` (número inteiro), `12.25` (número de ponto flutuante), `"pirata que estica"` (cadeia de caracteres).
@@ -44,8 +47,6 @@ Em outras palavras, o que diferencia esses dois grupos é o momento em que acont
 Ao comparar os dois estilos de tipagem, as vantagens de um geralmente coincidem com as desvantagens do outro. Linguagens dinâmicas oferecem maior flexibilidade, dinamicidade e exigem menos código, porém, em troca, podem sacrificar robustez, previsibilidade, desempenho e proteção contra bugs, características presentes em linguagens estáticas.
 
 Por outro lado, linguagens estáticas são conhecidas por sua robustez, segurança, maior desempenho e previsibilidade. No entanto, podem ser consideradas mais rígidas e verbosas em comparação com as linguagens dinâmicas.
-
-Na prática, as linguagens geralmente não se enquadram puramente em um desses paradigmas, mas incorporam características de ambos. Essas particularidades serão exemplificadas mais adiante neste artigo.
 
 ```java
 // Tipagem Estática:
@@ -87,7 +88,7 @@ a = a + b   // a = "102"
 
 Paradigmas de programação referem-se a maneiras de estruturar e conceber código, essencialmente representando abordagens distintas para resolver problemas por meio da programação. São, portanto, maneiras de programar.
 
-A categorização dos paradigmas divide-se principalmente em dois tipos: programação imperativa e programação declarativa. A programação imperativa envolve a explicitação passo a passo de ações a serem executadas, baseando-se na mudança de estado do programa e no controle do fluxo de execução, refletindo de perto o funcionamento interno de um computador.
+A categorização dos paradigmas divide-se principalmente em dois tipos: programação imperativa e programação declarativa. A programação imperativa envolve a explicitação de um passo a passo de ações a serem executadas, baseando-se na mudança de estado do programa e no controle do fluxo de execução, refletindo de perto o funcionamento interno de um computador.
 
 Por outro lado, a programação declarativa concentra-se apenas na declaração do problema e na especificação do resultado desejado, sem prescrever a sequência exata de passos para atingir esse resultado. Essa abordagem é mais abstrata, distanciando-se do nível de detalhes da implementação.
 
@@ -95,7 +96,7 @@ Linguagens de programação podem adotar exclusivamente um paradigma, mas é mai
 
 ### Programação Procedural
 
-A programação procedural, pertencente à categoria de programação imperativa, é caracterizada pela estruturação do programa em procedimentos. Estes procedimentos consistem em trechos distintos de instruções que se comunicam entre si para alcançar um objetivo específico.
+A programação procedural, pertencente à categoria de programação imperativa, é caracterizada pela estruturação do programa em procedimentos. Estes procedimentos consistem em trechos distintos de instruções que se se executam entre si para alcançar um objetivo específico.
 
 A estruturação por procedimentos confere à programação procedural a vantagem da reusabilidade do código, uma vez que um mesmo procedimento pode ser invocado em diferentes partes do programa. Esta característica promove a modularidade e facilita a manutenção do código, por torná-lo menor e mais legível. Além disso, a atualização de um procedimento reflete automaticamente em todas as chamadas realizadas ao longo do código.
 
@@ -104,11 +105,11 @@ A programação procedural apresenta o menor nível de abstração entre os trê
 ```c
 // Exemplo de uso do paradigma procedural:
 
-int somar(int a, int b) {
+float somar(float a, float b) {
     return a + b;
 }
 
-int calcular_media(float numeros[], int qt_numeros) {
+float calcular_media(float numeros[], int qt_numeros) {
     float soma = 0;
     for(int i=0; i < qt_numeros; i = i+=1)
         soma = somar(soma, numeros[i]);
@@ -116,7 +117,8 @@ int calcular_media(float numeros[], int qt_numeros) {
 }
 
 int main() {
-    float media = calcular_media(1, 2, 3, 4);
+    float nums[] = {1, 2, 3, 4};
+    float media = calcular_media(nums, 4);
 
     return 0;
 }
@@ -128,11 +130,11 @@ A programação orientada a objetos (POO) é um paradigma imperativo amplamente 
 
 Em grande parte das linguagens de programação, os objetos são definidos por meio de classes. As classes são essencialmente descrições de quais características um objeto deve possuir e quais ações ele deve ser capaz de realizar. Os objetos são então instâncias concretas dessas classes, moldados conforme as especificações da classe.
 
-Para ilustrar esse conceito, consideremos uma classe que define um cachorro com atributos como raça e nome, juntamente com métodos para latir e correr. Podemos criar diferentes instâncias dessa classe, como um cachorro da raça *Bulldog* Francês chamado Sushi e outro da raça *American Bully* chamado Zara. Além disso, podemos fazer os dois cachorros de fato latirem e até interagir um com outro (por exemplo, correr atrás do outro).
+Para ilustrar esse conceito, consideremos uma classe que define que um cachorro possui os atributos raça e nome, juntamente com métodos para latir e correr. Podemos criar diferentes instâncias dessa classe, como um cachorro da raça *Bulldog* Francês chamado Sushi e outro da raça *American Bully* chamado Zara. Além disso, podemos fazer os dois cachorros de fato latirem e até interagir um com outro (por exemplo, um correr atrás do outro).
 
 Além disso, o paradigma incorpora conceitos poderosos como a herança, que possibilita o reaproveitamento de código ao permitir que uma classe herde características e comportamentos de outra. Reutilizando o exemplo anterior, podemos ter uma classe Cachorro como base e criar subclasses específicas como *Bulldog* Francês e *American Bully*, herdando as características da classe principal. Isso proporciona uma organização hierárquica que reflete a relação entre diferentes tipos de cachorros.
 
-O polimorfismo é outra característica relevante, permitindo que objetos de diferentes classes sejam tratados de maneira uniforme. No exemplo dos cachorros, podemos ter uma função que aceita qualquer instância de cachorro como parâmetro, independentemente da raça específica. Isso aumenta a flexibilidade e extensibilidade do código.
+O polimorfismo é outra característica relevante, permitindo que objetos de diferentes classes sejam tratados de maneira uniforme. No exemplo dos cachorros, podemos ter uma função que aceita qualquer instância de cachorro como parâmetro, independentemente da raça específica. Isso aumenta a flexibilidade e reutilização do código.
 
 A POO é considerada a melhor maneira de modelar o mundo por meio de código. Essa metodologia proporciona não apenas reusabilidade de código e modularidade, características já presentes na programação procedural, mas também introduz abstração e encapsulamento. A comunicação com um objeto é realizada exclusivamente através de seus métodos, sem a necessidade de entender detalhes internos, o que favorece a colaboração em equipe e a construção de projetos complexos de maneira mais eficiente. Essa combinação de características faz da programação orientada a objetos uma escolha valiosa para o desenvolvimento de grandes projetos e o trabalho colaborativo entre desenvolvedores.
 
@@ -152,9 +154,7 @@ pessoa2.correr()
 
 ### Programação Funcional
 
-A programação funcional, um tipo de programação declarativa, difere das abordagens imperativas ao estruturar um programa através da declaração de funções, assemelhando-se a funções matemáticas. Essa abordagem possui o mais alto nível de abstração entre as três.
-
-Uma característica fundamental da programação funcional é o tratamento das funções como "cidadãs de primeira classe", o que significa que elas podem ser atribuídas a constantes e variáveis, passadas como parâmetro para outras funções e retornadas por funções, como qualquer outro tipo de dado.
+A programação funcional, um tipo de programação declarativa, difere das abordagens imperativas ao estruturar um programa através da declaração de funções, assemelhando-se a funções matemáticas. Essa abordagem possui o mais alto nível de abstração entre as três. Uma característica fundamental da programação funcional é o tratamento das funções como "cidadãs de primeira classe", o que significa que elas podem ser atribuídas a constantes e variáveis, passadas como parâmetro para outras funções e retornadas por funções, como qualquer outro tipo de dado.
 
 Uma característica marcante de linguagens puramente funcionais é a ausência do conceito de atribuição, eliminando a troca de valores de variáveis. Essa escolha é feita devido à complexidade que as atribuições trazem ao código, uma vez que é preciso levar em consideração o momento de execução para saber o valor de uma variável. Por isso, linguagens puramente funcionais evitam o uso de *loops*, recorrendo à recursão e a funções padrão da linguagem como substitutos, uma vez que *loops* necessitam do conceito de atribuição.
 
@@ -185,13 +185,11 @@ main = do
 
 ### C/C++
 
-A linguagem C é notável por sua posição como uma linguagem de programação de nível mais baixo, destacando-se como uma linguagem procedural amplamente utilizada. Ela desempenha um papel fundamental na construção de sistemas operacionais, drivers, sistemas embarcados e até mesmo na implementação de compiladores e interpretadores para outras linguagens. Grande parte do que é usado hoje no dia a dia foi construído nas bases sólidas dessa linguagem.
+A linguagem C é notável por sua posição como uma linguagem de programação de nível mais baixo, sendo uma linguagem procedural amplamente utilizada. Ela desempenha um papel fundamental na construção de sistemas operacionais, drivers, sistemas embarcados e até mesmo na implementação de compiladores e interpretadores para outras linguagens, como [Python](#python). Grande parte do que é usado hoje no dia a dia foi construído nas bases sólidas dessa linguagem. Seu impacto não se limita apenas à sua aplicação direta, pois influenciou a criação de várias outras linguagens populares, como [JavaScript](#javascript) e [Java](#java). 
 
-Seu impacto não se limita apenas à sua aplicação direta, pois influenciou a criação de várias outras linguagens populares, como [JavaScript](#javascript) e [Java](#java). A simplicidade inerente à linguagem C é evidente em seu reduzido conjunto de palavras reservadas, tornando-a uma escolha simples para muitos desenvolvedores.
+A simplicidade inerente à linguagem C é evidente em seu reduzido conjunto de palavras reservadas, tornando-a uma escolha simples para muitos desenvolvedores. No entanto, sua simplicidade também se reflete em características que podem desafiar desenvolvedores, como o gerenciamento manual de memória, utilizando ponteiros para referenciar posições de memória. Essa abordagem pode levar a códigos mais propensos a erros de segurança. Dentre os exemplos presentes nesta seção, C e C++ são as únicas linguagens que não usam coletor de lixo para a desalocação automática de memória inutilizada.
 
-No entanto, sua simplicidade também se reflete em características que podem desafiar desenvolvedores, como o gerenciamento manual de memória, utilizando ponteiros para referenciar posições de memória. Essa abordagem pode levar a códigos mais propensos a erros de segurança. Dentre os exemplos presentes nesta seção, C e C++ são as únicas linguagens que não usam coletor de lixo para a desalocação automática de memória inutilizada.
-
-Outro aspecto peculiar é a falta de estruturas de dados mais complexas, e a inexistência de um tipo de dado dedicado para strings, que são representadas como simples vetores de caracteres. A tipagem estática e fraca da linguagem C significa que, embora o compilador faça verificações de tipo, a primitividade dos tipos permite conversões implícitas. Caracteres, booleanos e ponteiros são representados como inteiros, proporcionando facilidade de conversão entre eles.
+Outro aspecto peculiar é a falta de estruturas de dados mais complexas, e a inexistência de um tipo de dado dedicado para *strings*, que são representadas como simples vetores de caracteres. A tipagem estática e fraca da linguagem C significa que, embora o compilador faça verificações de tipo, a primitividade dos tipos permite conversões implícitas. Caracteres, booleanos e ponteiros são representados como inteiros, proporcionando facilidade de conversão entre eles.
 
 C++ surge como um superconjunto de C, acrescentando suporte à Programação Orientada a Objetos (POO). Apesar de compartilhar muitas características com C, como sua aplicação, a curva de aprendizado íngreme e uma tipagem mais forte também a diferenciam de seu subconjunto. Enquanto C é venerada por sua velocidade, C++ expande suas capacidades, especialmente em domínios onde a POO é essencial.
 
@@ -199,18 +197,32 @@ C++ surge como um superconjunto de C, acrescentando suporte à Programação Ori
 // C:
 
 #include <stdio.h>
+#include <stdlib.h>
+
+int somar(int *vetor, int tamanho) {
+    int soma = 0;
+    for(int i=0; i < tamanho; i++)
+        soma += vetor[i];
+    return soma
+}
 
 int main() {
-    int num1, num2;
-    printf("Digite o primeiro numero: ");
-    scanf("%d", &num1);
+    int tamanho;
+    printf("Digite o tamanho do vetor:");
+    scanf("%d", &tamanho);
 
-    printf("Digite o segundo numero: ");
-    scanf("%d", &num2);
+    int *vetor = malloc(tamanho * sizeof(int));
+    if(vetor == NULL) {
+        printf("A alocaçao de memoria falhou.\n");
+        return 1;
+    }
 
-    int soma = num1 + num2;
-    printf("A soma de %d com %d e: %d\n", num1, num2, soma);
+    printf("Digite %d inteiros:\n", tamanho);
+    for(int i=0; i < tamanho; i++)
+        scanf("%d", &vetor[i]);
+    printf("A soma dos inteiros é: %d\n", somar(vetor, tamanho));
 
+    free(vetor);
     return 0;
 }
 ```
@@ -220,36 +232,60 @@ int main() {
 
 #include <iostream>
 
+int somar(int *vetor, int tamanho) {
+    int soma = 0;
+    for(int i = 0; i < tamanho; i++)
+        soma += vetor[i];
+    return soma;
+}
+
 int main() {
-    int num1, num2;
-    std::cout << "Digite o primeiro numero: ";
-    std::cin >> num1;
+    int tamanho;
+    std::cout << "Digite o tamanho do vetor: ";
+    std::cin >> tamanho;
 
-    std::cout << "Digite o segundo numero: ";
-    std::cin >> num2;
+    int *vetor = new int[tamanho];
+    if(vetor == nullptr) {
+        std::cout << "A alocação de memória falhou.\n";
+        return 1;
+    }
 
-    int soma = num1 + num2;
-    std::cout << "A soma de " << num1 << " com " << num2 << " e: " << soma << std::endl;
+    std::cout << "Digite " << tamanho << " inteiros:\n";
+    for(int i = 0; i < tamanho; i++)
+        std::cin >> vetor[i];
+    std::cout << "A soma dos inteiros é: " << somar(vetor, tamanho) << std::endl;
 
+    delete[] vetor;
     return 0;
 }
 ```
 
 ### Javascript
 
-JavaScript (JS) é uma linguagem de alto nível, reconhecida como uma das, se não a linguagem mais popular do mundo. Sua popularidade é impulsionada pelo fato de ser uma tecnologia fundamental na *World Wide Web*, com mais de 98% dos sites utilizando JS no *front-end*. Todos os navegadores mais utilizados possuem uma engine dedicada à execução de código JS.
+JavaScript (JS) é uma linguagem de alto nível, reconhecida como uma das, se não a linguagem mais popular do mundo. Sua popularidade é impulsionada pelo fato de ser uma tecnologia fundamental na *World Wide Web*, com mais de 98% dos sites utilizando JS no *front-end*. Todos os navegadores mais utilizados possuem uma *engine* dedicada à execução de código JS.
 
 Esta linguagem é conhecida por sua tipagem dinâmica e extremamente fraca, resultando em comportamentos por vezes bizarros e inconsistentes. Além disso, JS é multiparadigma, oferecendo suporte à orientação a objetos baseada em protótipo, uma alternativa às classes que dá dinamismo e flexibilidade ao código, e à programação funcional, incluindo, inclusive, o uso de funções de primeira classe. JS brilha especialmente na programação orientada a eventos, fazendo uso de sua capacidade para assincronicidade e manipulação do HTML através do DOM.
 
-Apesar de fazer parte da especificação da linguagem (ECMAScript), muitos recursos importantes são fornecidos pelo sistema de execução, como no caso do browser. O loop de eventos não bloqueante, por exemplo, permite que, mesmo usando uma única thread, o JS trate de outras tarefas enquanto espera a resposta de APIs, bancos de dados ou outros agentes assíncronos.
+```js
+// Conversão implícita em JS:
 
-O ecossistema do JavaScript é vasto, incluindo frameworks como Next.js, Angular e Vue.js, que são amplamente utilizados no desenvolvimento front-end. Outro destaque é a popularização do formato JSON, derivado do JS, mas adotado como padrão de mercado por inúmeras linguagens.
+const a = [] + []       // a = ""
+const b = [] + {}       // b = "[object Object]"
+const c = false + []    // c = "false"
+const d = "123" + 1     // d = "1231"
+const e = "123" - 1     // e = 122
+const f = "123" - "abc" // f = NaN  (NaN significa "not a number", cujo tipo é number)
+```
 
-JavaScript é considerada uma linguagem interpretada, embora a realidade seja mais complexa hoje em dia. No motor V8, presente nos navegadores baseados em Chromium, o código é convertido em bytecode, que é interpretado inicialmente. À medida que o programa é executado, partes frequentemente usadas são convertidas para código de máquina nativo, garantindo maior rapidez na execução. Isso é chamado de compilação *Just-in-time*(JIT). Apesar disso, a execução de um programa JS ainda é feito a partir do código-fonte.
+Apesar de fazer parte da especificação da linguagem (ECMAScript), muitos recursos importantes são fornecidos pelo sistema de execução, como no caso do browser. O loop de eventos não bloqueante, por exemplo, permite que, mesmo usando uma única thread, o JS trate de outras tarefas enquanto espera a resposta de APIs, bancos de dados ou outros agentes assíncronos. Isso torna a linguagem extremamente poderosa para lidar apliações com grande I/O (entrada e saída), como interfaces.
 
-O motor V8, sendo independente de um navegador, possibilitou a expansão do uso do JavaScript para o back-end, através de ambientes como o Node.js. No back-end, JS também possui um amplo ecossistema, com o npm registrando o maior número de pacotes do mundo. Frameworks notáveis incluem Express, Fastify e Nest.js.
+O ecossistema do JavaScript é vasto, incluindo *frameworks* como Next.js, Angular e Vue.js, que são amplamente utilizados no desenvolvimento front-end. Outro destaque é a popularização do formato JSON, derivado do JS, mas adotado como padrão de mercado por inúmeras linguagens.
 
-Assim como C, JavaScript também possui um superconjunto: TypeScript. TypeScript adiciona segurança e robustez da tipagem estática ao JavaScript, gerando código JS após a compilação. Essa evolução torna JS uma linguagem mais versátil, pois seu uso em sistemas de grande porte é favorecido.
+JavaScript é considerada uma linguagem interpretada, embora a realidade seja mais complexa hoje em dia. No motor V8, presente nos navegadores baseados em Chromium (Google Chrome, Microsoft Edge, Opera, Samsung Internet), o código é convertido em *bytecode*, que é interpretado inicialmente. À medida que o programa é executado, partes frequentemente usadas são convertidas para código de máquina nativo, garantindo maior rapidez na execução. Isso é chamado de compilação *Just-in-time*(JIT). Apesar disso, a execução de um programa JS ainda é feito a partir do código-fonte.
+
+O motor V8, sendo independente de um navegador, possibilitou a expansão do uso do JavaScript para o back-end, através de ambientes como o Node.js, onde JS é usado com eficiência em aplicações com grande quantidade de I/O. No back-end, JS também possui um amplo ecossistema, com o npm registrando o maior número de pacotes do mundo. *Frameworks* notáveis incluem Express, Fastify e Nest.js.
+
+Assim como C, JavaScript também possui um superconjunto: TypeScript. TypeScript adiciona a segurança e a robustez da tipagem estática ao JavaScript, gerando código JS após a compilação. Essa evolução torna JS uma linguagem mais versátil, pois seu uso em sistemas de grande porte é favorecido.
 
 ```js
 // JS no Front-End:
@@ -290,21 +326,46 @@ const result: number = addNumbers(num1, num2);
 
 ### Python
 
-Python é uma linguagem de alto nível, multiparadigma e extremamente versátil, destacando-se em diversas áreas de aplicação. Ao lado de JavaScript, tornou-se uma das linguagens mais populares no cenário da programação moderna.
+Python é uma linguagem de alto nível, multiparadigma e extremamente versátil, destacando-se em diversas áreas de aplicação. Ao lado de JavaScript, tornou-se uma das linguagens mais populares no cenário da programação moderna. Uma característica marcante do Python é o seu foco na legibilidade e simplicidade do código. Para alcançar esse objetivo, a linguagem utiliza a identação como delimitador de bloco, em contraste com o uso de chaves em outras linguagens. Além disso, o uso de parênteses é minimizado, e muitos símbolos presentes em outras linguagens são substituídos por palavras do inglês, facilitando a compreensão do código.
 
-Uma característica marcante do Python é o seu foco na legibilidade e simplicidade do código. Para alcançar esse objetivo, a linguagem utiliza a identação como delimitador de bloco, em contraste com o uso de chaves em outras linguagens. Além disso, o uso de parênteses é minimizado, e muitos símbolos presentes em outras linguagens são substituídos por palavras do inglês, facilitando a compreensão do código.
+```
+Zen do Python:
+- Bonito é melhor que feio.
+- Explícito é melhor que implícito.
+- Simples é melhor que complexo.
+- Complexo é melhor que complicado.
+- Linear é melhor do que aninhado.
+- Esparso é melhor que denso.
+- Legibilidade conta.
+- Casos especiais não são especiais o bastante para quebrar as regras.
+- Ainda que praticidade vença a pureza.
+- Erros nunca devem passar silenciosamente.
+- A menos que sejam explicitamente silenciados.
+- Diante da ambiguidade, recuse a tentação de adivinhar.
+- Dever haver um — e preferencialmente apenas um — modo óbvio para fazer algo.
+- Embora esse modo possa não ser óbvio a princípio a menos que você seja holandês.
+- Agora é melhor que nunca.
+- Apesar de que nunca frequentemente é melhor do que *exatamente* agora
+- Se a implementação é difícil de explicar, é uma má ideia
+- Se a implementação é fácil de explicar, pode ser uma boa ideia
+- Namespaces são uma grande ideia — vamos ter mais dessas!
+```
 
-Apesar de ser uma linguagem de tipagem dinâmica, o Python permite a utilização de anotações de tipo. Essas anotações servem não apenas para documentação, mas também para a verificação de tipos por meio de ferramentas externas, proporcionando um ambiente mais robusto para o desenvolvimento.
+Apesar de ser uma linguagem de tipagem dinâmica, o Python permite a utilização de anotações de tipo. Essas anotações servem não apenas para documentação, mas também para a verificação de tipos por meio de ferramentas externas, proporcionando um ambiente mais robusto para o desenvolvimento. Embora Python seja majoritariamente uma linguagem de tipagem forte, é importante notar que ela realiza conversões implícitas de outros tipos para booleano, demonstrando uma flexibilidade que pode ser explorada de maneira estratégica.
 
-Embora Python seja majoritariamente uma linguagem de tipagem forte, é importante notar que ela realiza conversões implícitas de outros tipos para booleano, demonstrando uma flexibilidade que pode ser explorada de maneira estratégica.
+```python
+def lista_tem_elementos(lista: List) -> bool:   # anotações de tipo
+    if lista:    # lista é convertida para booleano
+        return True
+    else:
+        return False
+```
 
-Na implementação mais difundida, CPython, o código fonte é compilado para bytecode e, após isso, interpretado. Apesar desse processo, a execução de um programa ocorre a partir do código-fonte, com ambas as etapas sendo realizadas atomicamente.
+Python é considerada uma linguagem interpretada, porém, na implementação mais difundida, CPython, o código-fonte é compilado para *bytecode* e, após isso, interpretado. Apesar desse processo, a execução de um programa ocorre a partir do código-fonte, com ambas as etapas sendo realizadas unitariamente.
 
 Python é amplamente reconhecido por sua riqueza em recursos e pela presença de uma vasta biblioteca padrão. Além disso, a instalação de pacotes externos é facilitada pelo gerenciador de pacotes pip, e esses pacotes são hospedados no registro PyPI, que conta com os pacotes feitos por uma das maiores comunidades na esfera do desenvolvimento.
 
-A linguagem é amplamente utilizada no desenvolvimento web back end, sendo suportada por frameworks como Django e Flask. Além disso, Python desempenha um papel crucial em campos como inteligência artificial e aprendizado de máquina, contando com bibliotecas renomadas como TensorFlow, Keras e PyTorch.
-
-Na área de ciência de dados, Python é uma escolha popular, impulsionada por bibliotecas como NumPy, Pandas e Matplotlib, que oferecem ferramentas poderosas para análise e visualização de dados, além das bibliotecas de IA citadas. Adicionalmente, Python é frequentemente empregado na automação, onde uma variedade de bibliotecas pode ser explorada para simplificar e otimizar tarefas automatizadas em diferentes contextos.
+A linguagem é amplamente utilizada no desenvolvimento *web back end*, sendo suportada por *frameworks* como Django e Flask. Além disso, Python desempenha um papel crucial em campos como inteligência artificial e aprendizado de máquina, contando com bibliotecas renomadas como TensorFlow, Keras e PyTorch. Na área de ciência de dados, Python é uma escolha popular, impulsionada por bibliotecas como NumPy, Pandas e Matplotlib, que oferecem ferramentas poderosas para análise e visualização de dados, além das bibliotecas de IA citadas. Adicionalmente, Python é frequentemente empregado na automação, onde uma variedade de bibliotecas pode ser explorada para simplificar e otimizar tarefas em diferentes contextos.
 
 ```python
 # Python:
@@ -315,34 +376,29 @@ def soma_quadrados_se_par(lista):
 numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 resultado = soma_quadrados_se_par(numeros)
 print(f"A soma dos quadrados dos números pares em {numeros} é: {resultado}")
-
 ```
 
 ### Java
 
-Java é uma linguagem de programação multiparadigma, mas se destaca por sua ênfase em orientação a objetos. Em sua estrutura, todo código em um programa Java precisa estar encapsulado em classes, sendo cada arquivo responsável por definir uma classe específica.
+Java é uma linguagem de programação multiparadigma, mas se destaca por sua ênfase em orientação a objetos. Em sua estrutura, todo código em um programa Java precisa estar encapsulado em classes, sendo cada arquivo responsável por definir uma classe específica. Com sua principal aplicação voltada para a construção de *software* robusto em larga escala no *back-end*, Java tem muito espaço no mercado nesse contexto. 
 
-Com sua principal aplicação voltada para a construção de software robusto em larga escala no back-end, Java tem muito espaço no mercado nesse contexto. Sua arquitetura é híbrida entre interpretação e compilação, sendo que o código Java é compilado para bytecode, que, por sua vez, é interpretado pela Máquina Virtual do Java (JVM), um aspecto fundamental da linguagem.
+Sua arquitetura é híbrida entre interpretação e compilação, sendo que o código Java é compilado para *bytecode*, que, por sua vez, é interpretado pela Máquina Virtual do Java (JVM), um aspecto fundamental da linguagem. Diferentemente de linguagens como JavaScript e Python, onde o código-fonte é executado diretamente, em Java é o arquivo em *bytecode* (.class) que é processado pelo usuário. Isso significa que, ao contrário de outras linguagens, o *bytecode* Java pode ser manipulado pelo usuário. 
 
-Diferentemente de linguagens como JavaScript e Python, onde o código fonte é executado diretamente, em Java é o arquivo em bytecode (.class) que é processado pelo usuário. Isso significa que, ao contrário de outras linguagens, o bytecode Java pode ser manipulado pelo usuário. O lema "escreva uma vez, execute em qualquer lugar" destaca a portabilidade do bytecode Java. Uma vez compilado, o bytecode pode ser executado em qualquer ambiente que possua a JVM, demonstrando a versatilidade da linguagem.
+O lema "escreva uma vez, execute em qualquer lugar" (WORA) destaca a portabilidade do *bytecode* Java. Uma vez compilado, o *bytecode* pode ser executado em qualquer ambiente que possua a JVM, demonstrando a versatilidade da linguagem. É interessante observar que Java, cuja compilação para *bytecode* esteve presente desde seu início, foi responsável pela popularização desse método. Isso foi adotada por linguagens como JavaScript e Python apenas posteriormente, por motivos de performance. 
 
-É interessante observar que Java, cuja compilação para bytecode esteve presente desde seu início, foi responsável pela popularização desse método. Isso foi adotada por linguagens como JavaScript e Python apenas posteriormente. 
-
-Java, ao possuir características tanto de linguagens interpretadas quanto compiladas, combina a portabilidade de uma linguagem interpretada com a privacidade e a tipagem estática típica de linguagens compiladas. Essa dualidade confere a Java uma posição única no panorama das linguagens de programação.
-
-Contudo, apesar de suas vantagens, Java também enfrenta críticas. Sua sintaxe verbosa e menos amigável para iniciantes é frequentemente apontada como uma barreira à entrada na linguagem. Além disso, alguns problemas de desempenho relacionados à JVM são citados como desafios a serem superados.
+Java, ao possuir características tanto de linguagens interpretadas quanto compiladas, combina a portabilidade de uma linguagem interpretada com a privacidade e a tipagem estática típica de linguagens compiladas. Contudo, apesar de suas vantagens, Java também enfrenta críticas. Sua sintaxe verbosa e menos amigável para iniciantes é frequentemente apontada como uma barreira à entrada na linguagem. Além disso, alguns problemas de desempenho relacionados à JVM são citados como desafios a serem superados.
 
 ```java
 public class Main {
     public static void main(String[] args) {
-        Estudante hugo = new Estudante(802629, "Hugo");
-        Estudante vini = new Estudante(802138, "Vini";
+        Estudante hugo = new Estudante(123456, "Caike Vinicius dos Santos");
+        Estudante mestreDeObras = new Estudante(654321, "Vinicius Silva Castro";
 
-        Curso cursoDeJava = new Curso("Aprenda a Fazer o Minecraft");
+        Curso cursoDeJava = new Curso("Aprenda a Fazer o Minecraft 2");
         cursoDeJava.matricular(hugo);
-        cursoDeJava.matricular(vini);
+        cursoDeJava.matricular(mestreDeObras);
 
-        List<Estudante> alunos = cursoDeJava.getEstudantes()
+        List<Estudante> alunos = cursoDeJava.getAlunos()
         System.out.println("Alunos: " + alunos);
     }
 }
@@ -383,6 +439,8 @@ public class Main {
 [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
 
 [Python Data Science Handbook | Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/)
+
+[Zen de Python – Wikipédia, a enciclopédia livre](https://pt.wikipedia.org/wiki/Zen_de_Python)
 
 [Python in 100 Seconds - YouTube](https://youtu.be/x7X9w_GIm1s?si=GlIHBCQoMrM9nR66)
 
